@@ -45,6 +45,9 @@ export class AppComponent {
     age: 27,
   }
 
+  fruit = "";
+  fruitList = ["Banana"];
+
 
   constructor() {
     this.theTypeless = "Jetzt hat die Variable einen Wert";
@@ -58,6 +61,13 @@ export class AppComponent {
     this.theArrays = ["402", 404];
 
     this.person.position = "12";
+
+    let banana = this.fruitList.pop();
+    if (banana != undefined) {
+      this.fruit = banana;
+    } else {
+      banana
+    }
   }
 
 
