@@ -17,4 +17,11 @@ export class AppComponent {
 
   theUndefined = undefined;
   theNull = null;
+
+  theTypeless: undefined | string;
+
+
+  constructor() {
+    this.theTypeless = "Jetzt hat die Variable einen Wert";
+  }
 }
