@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Person } from './interfaces/person.interface';
+
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,8 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
+
 export class AppComponent {
   title = 'typescript';
 
@@ -26,15 +30,21 @@ export class AppComponent {
 
   theArrays: [string, 200 | 404] = ["200", 404];
 
-  person: {
-    readonly name: string | number; // readonly = nur lesbar, nicht änderbar
-    age: number;
-    position?: string; // ? = nicht unbedingt notwendig
-  } = {
-      name: "Nadja",
-      age: 27,
-      // position: "boss",
-    }
+  // person: {
+  //   readonly name: string | number; // readonly = nur lesbar, nicht änderbar
+  //   age: number;
+  //   position?: string; // ? = nicht unbedingt notwendig
+  // } = {
+  //     name: "Nadja",
+  //     age: 27,
+  //     // position: "boss",
+  //   }
+
+  person: Person = {
+    name: "Nadja",
+    age: 27,
+  }
+
 
   constructor() {
     this.theTypeless = "Jetzt hat die Variable einen Wert";
@@ -47,8 +57,9 @@ export class AppComponent {
 
     this.theArrays = ["402", 404];
 
-    this.person.name = 12;
+    this.person.position = "12";
   }
+
 
   add(a: number, b: number): number {
     return a + b;
