@@ -22,12 +22,20 @@ export class AppComponent {
 
   theArray: (number | string)[] = [1, 2];
 
+  noteType: "200" | "404" = "404";
+
+  theArrays: [string, 200 | 404] = ["200", 404];
+
   constructor() {
     this.theTypeless = "Jetzt hat die Variable einen Wert";
 
     this.theArray = [1, "4"];
 
     this.add(1, 2);
+
+    this.noteType = "200";
+
+    this.theArrays = ["402", 404];
   }
 
   add(a: number, b: number): number {
