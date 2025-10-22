@@ -20,8 +20,17 @@ export class AppComponent {
 
   theTypeless: undefined | string;
 
+  theArray: (number | string)[] = [1, 2];
 
   constructor() {
     this.theTypeless = "Jetzt hat die Variable einen Wert";
+
+    this.theArray = [1, "4"];
+
+    this.add(1, 2);
+  }
+
+  add(a: number, b: number): number {
+    return a + b;
   }
 }
