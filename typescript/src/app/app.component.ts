@@ -26,6 +26,16 @@ export class AppComponent {
 
   theArrays: [string, 200 | 404] = ["200", 404];
 
+  person: {
+    readonly name: string | number; // readonly = nur lesbar, nicht änderbar
+    age: number;
+    position?: string; // ? = nicht unbedingt notwendig
+  } = {
+      name: "Nadja",
+      age: 27,
+      // position: "boss",
+    }
+
   constructor() {
     this.theTypeless = "Jetzt hat die Variable einen Wert";
 
@@ -36,6 +46,8 @@ export class AppComponent {
     this.noteType = "200";
 
     this.theArrays = ["402", 404];
+
+    this.person.name = 12;
   }
 
   add(a: number, b: number): number {
